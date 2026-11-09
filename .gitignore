@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+dist/
+payload/
+test-results.local.json
+credits-sources.local.json
+editorial-backups.local/
