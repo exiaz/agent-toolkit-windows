@@ -13,6 +13,25 @@ import install
 
 
 class InstallerTests(unittest.TestCase):
+    def test_design_library_preserves_upstream_files_and_agent_paths(self):
+        manifest = json.loads((install.ROOT / 'manifest.json').read_text('utf-8'))
+        payload = install.payload_bytes(install.ROOT, manifest)
+        base = 'user/.agents/skills/awesome-design-md/'
+        source = json.loads(payload[base + 'SOURCE.json'])
+        designs = [name for name in source['upstream_files'] if name.endswith('/DESIGN.md')]
+        self.assertEqual(len(designs), source['design_count'])
+        self.assertGreater(len(designs), 0)
+        import hashlib
+        for name, expected in source['upstream_files'].items():
+            relative = 'LICENSE' if name == 'LICENSE' else 'references/UPSTREAM_README.md' if name == 'README.md' else 'references/' + name
+            data = payload[base + relative]
+            actual = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+            self.assertEqual(actual, expected, name)
+            self.assertEqual(data, payload['user/.claude/skills/awesome-design-md/' + relative])
+        for name in designs:
+            self.assertIn(('(' + name + ')').encode(), payload[base + 'references/INDEX.md'])
+        self.assertEqual(payload[base + 'LICENSE'], (install.ROOT / 'third-party-licenses/VoltAgent--awesome-design-md.txt').read_bytes())
+
     def test_zip_payload_rejects_extra_entries_and_tampering(self):
         with tempfile.TemporaryDirectory() as tmp:
             package = Path(tmp)

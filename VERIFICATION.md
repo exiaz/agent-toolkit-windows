@@ -4,21 +4,22 @@ Pemeriksaan pada 9 November 2026 mencakup installer, arsip distribusi, dan runti
 
 | Pemeriksaan | Hasil |
 |---|---|
-| Suite installer dan distribusi | PASSED: 9/9 tes, 28.468 detik |
+| Suite installer dan distribusi | PASSED: 10/10 tes, 43.387 detik |
 | Runtime koordinasi global | PASSED: tes Node dijalankan oleh suite installer, exit 0 |
 | Payload umum | PASSED: seluruh berkas dan konfigurasi memakai scope pengguna |
 | Pemindaian privasi distribusi | PASSED: dokumen, manifest, dan isi teks arsip diperiksa |
-| Integritas payload | PASSED: 869 berkas cocok dengan SHA-256 manifest |
+| Integritas payload | PASSED: 1216 berkas cocok dengan SHA-256 manifest |
 | Backup, relokasi profil, dan instalasi ulang | PASSED: konfigurasi tujuan dipertahankan, instalasi kedua tanpa perubahan |
 | Konflik file, hooks, dan path traversal | PASSED: perubahan berbeda dan path keluar target ditolak |
+| Koleksi Awesome DESIGN.md | PASSED: 84 referensi, integritas upstream, salinan skill Claude, dan lisensi VoltAgent |
 | Credits dan notices | PASSED: atribusi dan lisensi disertakan dalam arsip |
 
 ## Arsip distribusi
 
 - Berkas: `payload.zip`
-- Isi: 869 berkas
-- Ukuran: 33,290,439 bytes
-- SHA-256: `780025a9f6d6ebd4c0c2c9f7e4f507d248e9939cd9281452c3557c54f5b13156`
+- Isi: 1216 berkas
+- Ukuran: 34,897,074 bytes
+- SHA-256: `7376fd84ea1867c5865a53c1b1e423547f23ae26d2bce4160bb9ebdc605218cb`
 
 ## Menjalankan pemeriksaan
 

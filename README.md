@@ -60,6 +60,18 @@ Credentials, API keys, OAuth tokens, conversation history, and session databases
 
 Collaboration supports explicit delegation between Codex and Claude. Startup hooks do not launch workers. Antigravity uses its own hook schema; this package does not enable inbound delegation to Antigravity. TasteCode runs native agent providers with its own session management and permission controls.
 
+## Design reference library
+
+The package includes [VoltAgent Awesome DESIGN.md](https://github.com/voltagent/awesome-design-md): **84 design-system references**, with a skill that reads relevant references on demand. The collection is pinned to commit `fcc70284932276d085f01ef9f83edde90b1258cb` and retains VoltAgent's MIT license.
+
+Example prompts:
+
+> Use $awesome-design-md to suggest a design reference for this interface.
+
+> Use $awesome-design-md with the Linear reference and adapt it to my existing project rules.
+
+The shared skill is installed at `%USERPROFILE%\.agents\skills\awesome-design-md`. Claude also receives a native skill entry; Codex and Antigravity can use the shared skills root. Other agents supporting Agent Skills can load the same `SKILL.md`; otherwise, provide its path explicitly. The guide does not automatically overwrite a project's `DESIGN.md` or launch a worker.
+
 ## Installation options
 
 **Preview the plan without changing files:**

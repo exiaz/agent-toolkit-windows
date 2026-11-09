@@ -15,6 +15,7 @@ Tools berikut digunakan sebagai bagian dari lingkungan kerja toolkit. Pilih sesu
 
 | Sumber | Fokus | Tautan |
 |---|---|---|
+| Awesome DESIGN.md | Referensi sistem desain dengan skill pengarah lintas agent | [VoltAgent/awesome-design-md](https://github.com/voltagent/awesome-design-md) |
 | Emil Kowalski skills | Antarmuka, animasi, interaksi, dan review motion | [emilkowalski/skills](https://github.com/emilkowalski/skills) |
 | Taste Skill | Arahan visual dan desain frontend | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 | Impeccable | Desain, audit, polish, dan aksesibilitas | [pbakaus/impeccable](https://github.com/pbakaus/impeccable), [website](https://impeccable.style/) |

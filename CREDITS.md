@@ -6,6 +6,7 @@ Agent Toolkit for Windows dikurasi di [exiaz/agent-toolkit-windows](https://gith
 
 | Komponen | Pembuat / proyek asal | Lisensi dan sumber |
 |---|---|---|
+| Awesome DESIGN.md dan koleksi referensi desain | VoltAgent dan kontributor | [Source](https://github.com/voltagent/awesome-design-md), [MIT](third-party-licenses/VoltAgent--awesome-design-md.txt) |
 | Skills desain, animasi, interaksi, dan Swift | Emil Kowalski dan kontributor | [Source](https://github.com/emilkowalski/skills), [MIT](third-party-licenses/emilkowalski--skills.txt) |
 | Taste Skill / `design-taste-frontend` | Leon Lin (`Leonxlnx`) dan kontributor | [Source](https://github.com/Leonxlnx/taste-skill), [MIT](third-party-licenses/Leonxlnx--taste-skill.txt) |
 | Impeccable, referensi desain, dan binary pemeriksa skill | Paul Bakaus dan kontributor | [Source](https://github.com/pbakaus/impeccable), [Apache-2.0](third-party-licenses/pbakaus--impeccable.txt), [notices](third-party-licenses/pbakaus--impeccable--NOTICE.md) |
